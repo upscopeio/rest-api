@@ -204,6 +204,9 @@ A successful response will look like this:
 }
 ```
 
+By visiting the link contained in `watch_url`, screen sharing will begin without
+further authorization required.
+
 ### Options
 | Parameter | Description |
 | --------- | ----------- |

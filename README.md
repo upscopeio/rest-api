@@ -174,7 +174,7 @@ With `:user_id` being the unique Upscope ID for the user. This is also called
 To start screen sharing with a user, you can make a `POST` request to the
 following endpoint:
 ```
-https://api.upscope.io/v1.0/users/:user_id/watch_link.json
+https://api.upscope.io/v1.0/users/:user_id/watch_url.json
 ```
 With `:user_id` being the unique Upscope ID for the user. This is also called
 `short_id`.

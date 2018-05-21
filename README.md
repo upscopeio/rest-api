@@ -183,12 +183,10 @@ The content of the request should be a JSON-encoded document with this format:
 
 ```json
 {
-  "observe_view": true,
   "branding": {
     "naked": true,
     "retry_url": "https://your-website.com/admin/screenshare/XYZ",
-    "no_bottom_bar": false,
-    "no_events": false
+    "no_bottom_bar": false
   },
   "agent": {
     "id": "123",
@@ -212,11 +210,9 @@ further authorization required.
 | --------- | ----------- |
 | `agent.id` | The ID of the agent (required). |
 | `agent.name` | The name of the agent (required). |
-| `observe_view` | If true, the agent will be shown the screen share screen instead of the events list if available (i.e. the user is online). |
 | `branding.naked` | If true , the Upscope logo will not be shown on the page. This is ideal if you want to display the page inside an iframe. Defaults to false. |
 | `branding.retry_url` | If set, the user will be able to click a "Retry now" link that redirects to this url if there are problems. When null , no button is displayed. Defaults to null. |
 | `branding.no_bottom_bar` | If true the bar with connection information at the bottom of the screen will not be shown. Defaults to null. |
-| `branding.no_events` | If true  the user will not have access to the events list, but only to the user's screen. This is particularly useful used with branding.naked  when embedding the page in an iframe. |
 
 ### Errors
 - If the user is not found, a `404 - NOT FOUND` error will be returned.

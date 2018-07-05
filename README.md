@@ -70,10 +70,10 @@ A response will look like this:
 In this context, "session" means one screen sharing session.
 
 ## Searching for a visitor or retrieving a list of visitors
-To get information about a visitor, you can make a `GET` call to the following
+To get a list of visitors or search for a specific visitor, you can make a `GET` call to the following
 endpoint:
 ```
-https://api.upscope.io/v1.1/list.json
+https://api.upscope.io/v1.1/list.json?search=QUERY
 ```
 
 An optional query parameter `search` will let you search just like you can do on
@@ -91,7 +91,7 @@ A successful response will look like this:
     }
   ]
 }
-``` 
+```
 
 ## Retrieving a visitor's information
 To get information about a visitor, you can make a `GET` call to the following
@@ -127,6 +127,10 @@ A successful response will look like this:
     "short_id": "ABCD1234",
     "tags": ["#customer"],
     "unique_id": "123",
+    "sessions": [
+    
+    ],
+    "_type", "visitor"
   }
 }
 ```
@@ -154,6 +158,7 @@ The visitor is described by the following attributes:
 | visitor.is_online | A boolean describing whether the visitor is currently connected to Upscope (and available for screensharing). |
 | visitor.is_in_session | A boolean describing whether the visitor is currently screen sharing with someone. |
 | visitor.js_configuration | A boolean describing whether the visitor has has configured Upscope through the Javascript API in a way that could conflict with the account's general settings. |
+| visitor.sessions | A list of recent screen sharing sessions with this visitor. |
 
 ### Errors
 - If the visitor is not found, a `404 - NOT FOUND` error will be returned.

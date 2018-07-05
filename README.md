@@ -128,9 +128,36 @@ A successful response will look like this:
     "tags": ["#customer"],
     "unique_id": "123",
     "sessions": [
-    
+      {
+        "id": 1,
+        "length_seconds": 91,
+        "formatted_length": "1 minute",
+        "call_length_seconds": 0,
+        "formatted_call_length": "-",
+        "started_at": "2018-07-05T11:53:38.000+01:00",
+        "ended_at": "2018-07-05T11:55:09.000+01:00",
+        "went_live": true,
+        "features_used": [
+          "click"
+        ],
+        "visitor_id": "ABCD1234",
+        "team": {
+          "id": 1,
+          "domain": "upscope.io",
+          "_type": "team"
+        },
+        "agents": [
+          {
+            "id": 1,
+            "name": "Joe Smith",
+            "agent_identifier": "ext-123",
+            "_type": "external_agent"
+          }
+        ],
+        "_type": "session"
+      }
     ],
-    "_type", "visitor"
+    "_type": "visitor"
   }
 }
 ```

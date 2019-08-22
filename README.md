@@ -218,11 +218,15 @@ The content of the request should be a JSON-encoded document with this format:
   "branding": {
     "naked": true,
     "retry_url": "https://your-website.com/admin/screenshare/XYZ",
-    "no_bottom_bar": false
+    "no_bottom_bar": false,
+    "on_end_url": "https://your-website.com/admin/screenshare/XYZ/ended"
   },
   "agent": {
     "id": "123",
     "name": "Joe Smith"
+  },
+  "metadata": {
+    "key": "value
   }
 }
 ```
@@ -244,7 +248,9 @@ further authorization required.
 | `agent.name` | The name of the agent (required). |
 | `branding.naked` | If true , the Upscope logo will not be shown on the page. This is ideal if you want to display the page inside an iframe. Defaults to false. |
 | `branding.retry_url` | If set, the visitor will be able to click a "Retry now" link that redirects to this url if there are problems. When null , no button is displayed. Defaults to null. |
+| `branding.on_end_url` | If set, the agent will be redirected to this url after the session ends. If not set, the window will be attempted to be closed. |
 | `branding.no_bottom_bar` | If true the bar with connection information at the bottom of the screen will not be shown. Defaults to null. |
+| `branding.metadata` | A JSON-encodeable object of metadata to add to the session object. This can be used when retrieving a list of sessions to run your own analytics. |
 
 ### Errors
 - If the visitor is not found, a `404 - NOT FOUND` error will be returned.

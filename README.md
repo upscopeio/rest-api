@@ -202,6 +202,15 @@ With `:visitor_id` being the unique Upscope ID for the visitor. This is also cal
 ### Errors
 - If the visitor is not found, a `404 - NOT FOUND` error will be returned.
 
+
+## Deleting all visitor from Upscope
+To delete all offline visitors from our system, make a `DELETE` call to the following endpoint:
+```
+https://api.upscope.io/v1.1/visitors.json?all=true
+```
+Only visitors that are not currently online will be removed, and the process might take a few minutes to complete.
+
+
 ## Generating a link to start screen sharing with a visitor
 To start screen sharing with a visitor, you can make a `POST` request to the
 following endpoint:

@@ -190,6 +190,11 @@ The visitor is described by the following attributes:
 ### Errors
 - If the visitor is not found, a `404 - NOT FOUND` error will be returned.
 
+### Getting screenshots and pageviews
+If you'd like to get the pageviews and screenshots captured for the visitor, add `?with_history=true` in the query string. You will then have access to the `visitor.history` attribute containing pageviews and screenshots.
+
+Screenshots and history need to be saved on the javascript SDK with the `Upscope('saveHistory');` method.
+
 ## Deleting a visitor from Upscope
 To completely delete a visitor from our system, you can make a `DELETE` call to the
 following endpoint:

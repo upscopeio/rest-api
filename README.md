@@ -1,4 +1,4 @@
-# [Upscope.io](https://upscope.io/)'s REST API
+# [Upscope](https://upscope.com/)'s REST API
 
 With Upscope's REST API you can retrieve information about your account and your
 visitors, as well as generate authorization tokens that allow unauthenticated visitors

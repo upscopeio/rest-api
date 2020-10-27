@@ -235,6 +235,9 @@ The content of the request should be a JSON-encoded document with this format:
     "no_bottom_bar": false,
     "on_end_url": "https://your-website.com/admin/screenshare/XYZ/ended"
   },
+  "permissions": {
+    "allow_click": false
+  },
   "agent": {
     "id": "123",
     "name": "Joe Smith"
@@ -265,6 +268,12 @@ further authorization required.
 | `branding.on_end_url` | If set, the agent will be redirected to this url after the session ends. If not set, the window will be attempted to be closed. |
 | `branding.no_bottom_bar` | If true the bar with connection information at the bottom of the screen will not be shown. Defaults to null. |
 | `branding.metadata` | A JSON-encodeable object of metadata to add to the session object. This can be used when retrieving a list of sessions to run your own analytics. The object should be flat, meaning values can only be strings, numbers, or booleans |
+| `permissions.allow_console` | Whether the agent should have access to remote console capabilities (defaults to `false`) |
+| `permissions.allow_click` | Whether the agent should have access to remote click (defaults to `true`, unless disabled through the Javascript SDK) |
+| `permissions.allow_draw` | Whether the agent should have access to drawing (defaults to `true`, unless disabled through the Javascript SDK) |
+| `permissions.allow_scroll` | Whether the agent should have access to remote scroll (defaults to `true`, unless disabled through the Javascript SDK) |
+| `permissions.allow_audio` | Whether the agent should have access to audio (defaults to `true`, unless disabled through the Javascript SDK) |
+| `permissions.allow_type` | Whether the agent should have access to remote type (defaults to `true`, unless disabled through the Javascript SDK) |
 
 ### Errors
 - If the visitor is not found, a `404 - NOT FOUND` error will be returned.

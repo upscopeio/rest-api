@@ -274,6 +274,7 @@ further authorization required.
 | `permissions.allow_scroll` | Whether the agent should have access to remote scroll (defaults to `true`, unless disabled through the Javascript SDK) |
 | `permissions.allow_audio` | Whether the agent should have access to audio (defaults to `true`, unless disabled through the Javascript SDK) |
 | `permissions.allow_type` | Whether the agent should have access to remote type (defaults to `true`, unless disabled through the Javascript SDK) |
+| `permissions.allow_agent_redirect` | Whether the agent should have access to remote agent redirect & reload features (defaults to `true`, unless disabled through the Javascript SDK) |
 
 ### Errors
 - If the visitor is not found, a `404 - NOT FOUND` error will be returned.

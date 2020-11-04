@@ -249,7 +249,7 @@ The content of the request should be a JSON-encoded document with this format:
 ```
 
 A successful response will look like this:
-```json
+```
 {
   "watch_url": "https://o.upscope.io?xyz"
 }
@@ -280,3 +280,23 @@ further authorization required.
 - If the visitor is not found, a `404 - NOT FOUND` error will be returned.
 - If the screen share would put you over your subscription limits, a
   `402 - PAYMENT REQUIRED` error will be returned.
+  
+  
+## Stopping an active session
+To stop an active session, you can make a `DELETE` request to the
+following endpoint:
+```
+https://api.upscope.io/v1.1/visitors/:visitor_id/session
+```
+With `:visitor_id` being the unique Upscope ID for the visitor. This is also called
+`short_id`.
+
+A successful response will look like this:
+```
+ok
+```
+
+This endpoint will return `ok` even if a session is not currently active.
+
+### Errors
+- If the visitor is not found, a `404 - NOT FOUND` error will be returned.
